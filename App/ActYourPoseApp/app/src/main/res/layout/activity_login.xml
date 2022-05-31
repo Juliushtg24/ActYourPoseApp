@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="@string/username"
+        android:text="@string/email"
         android:textColor="@color/black_light"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,9 +66,10 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_username">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailInputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/username" />
+            android:hint="@string/email" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -84,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/passwordEditTextLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="57dp"
@@ -100,9 +101,11 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_password">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordInputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password" />
+            android:hint="@string/password"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -117,7 +120,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.299"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
 
     <TextView
         android:id="@+id/tv_signup"
@@ -148,5 +151,6 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

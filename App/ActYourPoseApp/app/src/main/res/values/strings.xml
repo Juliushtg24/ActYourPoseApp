@@ -13,8 +13,39 @@
     <string name="email">Email</string>
     <string name="confidence_level">Confidence Level</string>
     <string name="register">Register</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="actyourpose">ActYourPose</string>
     <string name="welcome_text_one">Pose App that helps you to get beautiful photo and increase your confident</string>
+    <string name="splash_screen_image">Splash Screen Image</string>
+    <string name="image_button_next">Image Button Next</string>
+    <string name="home">Home</string>
+    <string name="learn">Learn</string>
+    <string name="explore">Explore</string>
+    <string name="profile">Profile</string>
+    <string name="take_photo_image_button">Take Photo Image Button</string>
+    <string name="switch_camera_option_button">Switch Camera Option Button</string>
+    <string name="take_a_photo">Take A photo</string>
+    <string name="pose_button">Pose Button</string>
+    <string name="this_is_home">This is Home</string>
+    <string name="welcome_user">Welcome User!</string>
+    <string name="learn_topics_title">How to do 1</string>
+    <string name="learn_topic_image">Learn Topic Image</string>
+    <string name="for_you_recommendation">For You Recommendation</string>
+    <string name="tabs_explore">Tabs Explore</string>
+
+    <string name="tab_text_1">Bandung</string>
+    <string name="tab_text_2">Jakarta</string>
+    <string name="tab_text_3">Semarang</string>
+    <string name="tab_text_4">Bali</string>
+    <string name="tab_text_5">Papua</string>
+    <string name="content_tab_text">This is Tab %1$d</string>
+    <string name="dummy_tabs_text">this is Bali</string>
+    <string name="dummy_fragment_text">This is Learn</string>
+    <string name="background_image_profile">Background Image Profile</string>
+    <string name="photo_collection">Photo Collection</string>
+    <string name="add_pose_item_button">Add Pose Item Button</string>
+    <string name="photo_of_cities">Photo of Cities</string>
+    <string name="category_photo">Category Photo</string>
+    <string name="log_out">Log Out</string>
 </resources>

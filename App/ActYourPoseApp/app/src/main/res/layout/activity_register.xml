@@ -25,6 +25,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_password_reg">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordInputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password" />
@@ -49,9 +50,11 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_email">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailInputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email" />
+            android:hint="@string/email"
+            android:textColorHint="#757575" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -148,6 +151,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_username">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameInputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/username" />
@@ -172,6 +176,7 @@
         android:id="@+id/slider_confidence"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/actyourpose"
         android:stepSize="1"
         android:valueFrom="0"
         android:valueTo="10"
@@ -195,4 +200,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/slider_confidence" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

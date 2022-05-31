@@ -7,7 +7,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.example.actyourposeapp.R
-import com.example.actyourposeapp.screen.login.LoginActivity
+import com.example.actyourposeapp.screen.welcome.WelcomeActivity
+
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
@@ -21,7 +22,7 @@ class SplashScreenActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this@SplashScreenActivity, LoginActivity::class.java)
+            val intent = Intent(this@SplashScreenActivity, WelcomeActivity::class.java)
             startActivity(intent)
             finish()
         }, delayTimeScreen.toLong())

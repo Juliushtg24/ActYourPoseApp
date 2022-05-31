@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "468793731790",
+    "project_id": "actyourpose",
+    "storage_bucket": "actyourpose.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468793731790:android:2ab6e846e4f285e3c1be9f",
+        "android_client_info": {
+          "package_name": "com.example.actyourposeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468793731790-cdtod5n189nvqhct0bmqe33oo5l6anfa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBALezfcgR2cYzs1oGD7Yk2_Y5dvum1wdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468793731790-cdtod5n189nvqhct0bmqe33oo5l6anfa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
