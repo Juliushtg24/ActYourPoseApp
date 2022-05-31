@@ -21,5 +21,6 @@ class WelcomeActivity : AppCompatActivity() {
                 .replace(R.id.welcome_fragment, WelcomeOneFragment(), "WelcomeOneFragment")
                 .commitAllowingStateLoss()
         }
+
     }
 }
