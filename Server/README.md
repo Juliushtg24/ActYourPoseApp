@@ -1,8 +1,8 @@
 ## ML Model Deployment
 
 1. save the ml model in h5 format.
-2. create main.py file and load the ml model
-3. create requirements.txt. this file specifying what python packages are required to run the project
+2. create main.py file and load the ml model.
+3. create requirements.txt. this file specifying what python packages are required to run the project.
 4. create app,yaml. this file is needed to create an app engine.
 5. open google cloud console and activate cloud shell.
 6. clone this repository.
@@ -30,4 +30,4 @@ gcloud app deploy
 gcloud app browse
 ```
 
-10. to try the API, see the [API documentation](dokumentasi.md)
+10. to try the API, see the [API documentation](dokumentasi.md).
