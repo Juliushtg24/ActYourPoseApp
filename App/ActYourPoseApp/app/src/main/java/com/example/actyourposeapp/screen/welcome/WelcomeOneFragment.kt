@@ -46,7 +46,6 @@ class WelcomeOneFragment : Fragment() {
             transaction.disallowAddToBackStack()
             transaction.commit()
         }
-
     }
 
 

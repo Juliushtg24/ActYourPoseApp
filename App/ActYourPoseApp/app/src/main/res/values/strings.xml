@@ -48,4 +48,18 @@
     <string name="photo_of_cities">Photo of Cities</string>
     <string name="category_photo">Category Photo</string>
     <string name="log_out">Log Out</string>
+    <string name="add_to_gallery">Add To Gallery</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="back_to_menu">Back To Menu</string>
+    <string name="desc_text">Description</string>
+    <string name="detail_image_topic">Detail Image Topic</string>
+    <string name="back_button">Back Button</string>
+    <string name="exit_pose_button">Exit Pose Button</string>
+    <string name="image_pose_item">Image Pose Item</string>
+    <string name="image_result">Image Result</string>
+    <string name="view_dummy">View Dummy</string>
+    <string name="dummy_image">Dummy Image</string>
+    <string name="unavailable">Unavailable Right Now</string>
+    <string name="pose_predict">Pose Predict</string>
+    <string name="background_predict">Background Predict</string>
 </resources>

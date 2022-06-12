@@ -7,7 +7,6 @@ import android.util.Log
 import android.widget.Toast
 import com.example.actyourposeapp.databinding.ActivityRegisterBinding
 import com.example.actyourposeapp.screen.login.LoginActivity
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -42,27 +41,47 @@ class RegisterActivity : AppCompatActivity() {
         val confidenceLevel = registerBinding.sliderConfidence.value.toInt()
 
 
-        auth.createUserWithEmailAndPassword(emailRegis, passwordRegis)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, "createUserWithEmail:success")
-                    sendToSignInPageWithData(
-                        emailRegis,
-                        confidenceLevel,
-                        nameRegis,
-                        passwordRegis,
-                    )
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(
-                        this, "Authentication failed.",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-
+        when {
+            emailRegis.isEmpty() -> {
+                registerBinding.emailEditTextLayout.error = "Email is Empty"
+                registerBinding.emailEditTextLayout.requestFocus()
             }
+            nameRegis.isEmpty() -> {
+                registerBinding.nameEditTextLayout.error = "Name is Empty"
+                registerBinding.nameEditTextLayout.requestFocus()
+            }
+            passwordRegis.isEmpty() -> {
+                registerBinding.passwordEditTextLayout.error = "Password is Empty"
+                registerBinding.passwordEditTextLayout.requestFocus()
+            }
+            passwordRegis.length < 6 -> {
+                registerBinding.passwordEditTextLayout.error = "Password Must be greater than 6"
+                registerBinding.passwordEditTextLayout.requestFocus()
+            }
+            else -> {
+                auth.createUserWithEmailAndPassword(emailRegis, passwordRegis)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "createUserWithEmail:success")
+                            sendToSignInPageWithData(
+                                emailRegis,
+                                confidenceLevel,
+                                nameRegis,
+                                passwordRegis,
+                            )
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "createUserWithEmail:failure", task.exception)
+                            Toast.makeText(
+                                this, "Authentication failed.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+
+                    }
+            }
+        }
 
 
     }
@@ -108,7 +127,10 @@ class RegisterActivity : AppCompatActivity() {
             }
 
         Firebase.auth.signOut()
-
+        Toast.makeText(
+            this, "Registration Success",
+            Toast.LENGTH_SHORT
+        ).show()
         backToSignInPage()
     }
 

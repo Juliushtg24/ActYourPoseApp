@@ -1,17 +1,17 @@
 package com.example.actyourposeapp.screen.adapter
 
-import android.util.Log
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.actyourposeapp.databinding.ItemPoseBinding
+import com.example.actyourposeapp.api.Topic
 import com.example.actyourposeapp.databinding.TopicItemBinding
+import com.example.actyourposeapp.screen.detail.DetailActivity
 
 
-
-
-class HomeTipsAdapter : RecyclerView.Adapter<HomeTipsAdapter.ListViewHolder>() {
+class HomeTipsAdapter(private val listTopicLearn: ArrayList<Topic>) :
+    RecyclerView.Adapter<HomeTipsAdapter.ListViewHolder>() {
 
     private lateinit var binding: TopicItemBinding
 
@@ -26,13 +26,27 @@ class HomeTipsAdapter : RecyclerView.Adapter<HomeTipsAdapter.ListViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val imageDummyUrl =
-            "https://media.product.which.co.uk/prod/images/original/gm-8d3b15d7-35b1-465e-b75d-6f12ba4a071f-digital-cameraslead.jpeg"
-        val textDummyTitle = "How To Take A photo"
+        val (title, photoUrl, reference, desc1, desc2, desc3) = listTopicLearn[position]
 
-        holder.binding.tvTopicTitle.text = textDummyTitle
-        Glide.with(holder.itemView.context).load(imageDummyUrl).into(holder.binding.ivLearnTopic)
+        holder.binding.tvTopicTitle.text = title
+        Glide.with(holder.itemView.context).load(photoUrl).into(holder.binding.ivLearnTopic)
+
+        holder.itemView.setOnClickListener {
+
+            val topic = Topic(
+                title,
+                photoUrl,
+                reference,
+                desc1,
+                desc2,
+                desc3
+            )
+
+            val intentDetail = Intent(it.context, DetailActivity::class.java)
+            intentDetail.putExtra("extra_topic", topic)
+            it.context.startActivity(intentDetail)
+        }
     }
 
-    override fun getItemCount(): Int = 8
+    override fun getItemCount(): Int = listTopicLearn.size
 }

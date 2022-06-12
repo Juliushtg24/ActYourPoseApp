@@ -81,15 +81,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="472dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="84dp"
             app:layout_constraintStart_toStartOf="@+id/tv_photo_collect"
             app:layout_constraintTop_toBottomOf="@+id/tv_photo_collect"
-            tools:listitem="@layout/topic_item" />
+            app:srcCompat="@drawable/image_splash_1"
+            tools:src="@drawable/image_splash_1" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingBottom="150dp"
+            android:text="No Photo Collections"
+            android:textColor="@color/black_light"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView7"
+            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintStart_toStartOf="@+id/imageView7"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,43 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screen.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/tv_welcome_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="@string/welcome_user"
-        android:textColor="@color/black_light"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <SearchView
-        android:id="@+id/sv_learn_topics"
-        android:background="@drawable/style_search_view"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_welcome_user"
-        app:layout_constraintStart_toStartOf="@+id/tv_welcome_user"
-        app:layout_constraintTop_toBottomOf="@+id/tv_welcome_user" />
+        android:layout_height="wrap_content">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_topic_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="@+id/sv_learn_topics"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/sv_learn_topics"
-        app:layout_constraintTop_toBottomOf="@+id/sv_learn_topics"
-        tools:listitem="@layout/topic_item" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_welcome_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/welcome_user"
+            android:textColor="@color/black_light"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SearchView
+            android:id="@+id/sv_learn_topics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/style_search_view"
+            app:layout_constraintEnd_toEndOf="@+id/tv_welcome_user"
+            app:layout_constraintStart_toStartOf="@+id/tv_welcome_user"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome_user" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_topic_list"
+            android:layout_width="370dp"
+            android:layout_height="649dp"
+            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sv_learn_topics"
+            tools:listitem="@layout/topic_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

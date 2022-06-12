@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.actyourposeapp">
 
-
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -19,6 +18,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ActYourPoseApp">
+        <activity
+            android:name=".screen.predict.PredictActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.detail.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.result.ResultActivity"
+            android:exported="false" />
         <activity
             android:name=".screen.camera.CameraActivity"
             android:exported="false" />
@@ -48,3 +56,5 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
+</manifest>

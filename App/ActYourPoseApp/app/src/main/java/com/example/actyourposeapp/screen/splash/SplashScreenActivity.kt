@@ -9,7 +9,6 @@ import android.os.Looper
 import com.example.actyourposeapp.R
 import com.example.actyourposeapp.screen.welcome.WelcomeActivity
 
-
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

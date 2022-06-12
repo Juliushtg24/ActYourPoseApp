@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide
 import com.example.actyourposeapp.databinding.ItemExploreImageBinding
 import com.example.actyourposeapp.databinding.ItemExploreImageTabBinding
 
-class TabsPhotoAdapter: RecyclerView.Adapter<TabsPhotoAdapter.ListViewHolder>() {
+class TabsPhotoAdapter(private val tabsList: ArrayList<String>): RecyclerView.Adapter<TabsPhotoAdapter.ListViewHolder>() {
 
     private lateinit var binding: ItemExploreImageTabBinding
 
@@ -22,11 +22,10 @@ class TabsPhotoAdapter: RecyclerView.Adapter<TabsPhotoAdapter.ListViewHolder>() 
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val imageDummyUrl =
-            "https://i.pinimg.com/736x/c8/7d/e9/c87de96bc79d9906106367cf1c0649f4.jpg"
+        val imageUrl = tabsList[position]
+        Glide.with(holder.itemView.context).load(imageUrl).into(holder.binding.ivPhotoImage)
 
-        Glide.with(holder.itemView.context).load(imageDummyUrl).into(holder.binding.ivPhotoImage)
     }
 
-    override fun getItemCount(): Int = 8
+    override fun getItemCount(): Int = tabsList.size
 }

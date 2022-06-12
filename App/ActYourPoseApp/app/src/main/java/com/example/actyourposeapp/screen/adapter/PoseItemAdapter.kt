@@ -1,5 +1,6 @@
 package com.example.actyourposeapp.screen.adapter
 
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.actyourposeapp.databinding.ItemPoseBinding
 
-class PoseItemAdapter : RecyclerView.Adapter<PoseItemAdapter.ListViewHolder>(){
+class PoseItemAdapter(private val poseList: ArrayList<String>) : RecyclerView.Adapter<PoseItemAdapter.ListViewHolder>(){
 
         private lateinit var binding: ItemPoseBinding
 
@@ -23,10 +24,11 @@ class PoseItemAdapter : RecyclerView.Adapter<PoseItemAdapter.ListViewHolder>(){
         }
 
         override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-            holder.binding.fabPose.setOnClickListener {
-                Log.d("PoseAdapter" , "Button Pose Clicked")
-            }
+            val photoUrl = poseList[position]
+
+            Glide.with(holder.itemView.context).load(photoUrl).into(holder.binding.ivPose)
+
         }
 
-        override fun getItemCount(): Int = 8
+        override fun getItemCount(): Int = poseList.size
 }

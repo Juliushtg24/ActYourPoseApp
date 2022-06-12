@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.actyourposeapp.api.Category
 import com.example.actyourposeapp.databinding.ItemExploreImageBinding
-import com.example.actyourposeapp.databinding.TopicItemBinding
 
-class ExplorePhotoAdapter : RecyclerView.Adapter<ExplorePhotoAdapter.ListViewHolder>() {
+class ExplorePhotoAdapter(private val itemList: ArrayList<Category>) : RecyclerView.Adapter<ExplorePhotoAdapter.ListViewHolder>() {
 
     private lateinit var binding: ItemExploreImageBinding
 
@@ -22,13 +22,11 @@ class ExplorePhotoAdapter : RecyclerView.Adapter<ExplorePhotoAdapter.ListViewHol
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val imageDummyUrl =
-            "https://media.istockphoto.com/photos/aerial-view-of-tokyo-cityscape-with-fuji-mountain-in-japan-picture-id1131743616?b=1&k=20&m=1131743616&s=170667a&w=0&h=stgpBO1SxauKdLh-9dcCecTZiGdkPapISKRs9oxuwFU="
-        val textDummyTitle = "City A"
+        val (imageUrl , title) = itemList[position]
 
-        holder.binding.tvRecommendPhoto.text = textDummyTitle
-        Glide.with(holder.itemView.context).load(imageDummyUrl).into(holder.binding.ivPhotoImage)
+        holder.binding.tvRecommendPhoto.text = title
+        Glide.with(holder.itemView.context).load(imageUrl).into(holder.binding.ivPhotoImage)
     }
 
-    override fun getItemCount(): Int = 8
+    override fun getItemCount(): Int = itemList.size
 }

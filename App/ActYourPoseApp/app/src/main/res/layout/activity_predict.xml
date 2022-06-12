@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screen.predict.PredictActivity">
+
+    <ImageView
+        android:id="@+id/iv_predict_item"
+        android:layout_width="210dp"
+        android:layout_height="271dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_predict_24" />
+
+    <TextView
+        android:id="@+id/tv_background_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/background_predict"
+        android:textColor="@color/black_light"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_predict_item"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/iv_predict_item"
+        app:layout_constraintTop_toBottomOf="@+id/iv_predict_item" />
+
+    <TextView
+        android:id="@+id/tv_result_predict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Pending..."
+        android:textColor="@color/black_light"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_background_text"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/tv_background_text"
+        app:layout_constraintTop_toBottomOf="@+id/tv_background_text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pose_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_result_predict"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/tv_result_predict"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result_predict" />
+
+    <ImageView
+        android:id="@+id/btn_exit"
+        android:layout_width="42dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_cancel_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>

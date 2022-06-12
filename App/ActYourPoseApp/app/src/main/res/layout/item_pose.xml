@@ -6,15 +6,15 @@
     android:layout_height="wrap_content"
     android:layout_marginEnd="10dp">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_pose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
+    <ImageView
+        android:id="@+id/iv_pose"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:contentDescription="@string/image_pose_item"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dummy_icon_pose"
-        android:contentDescription="@string/add_pose_item_button"
-        android:focusable="true" />
+        tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
