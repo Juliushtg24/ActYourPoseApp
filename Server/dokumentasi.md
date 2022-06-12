@@ -98,3 +98,43 @@ Contoh (JSON):
 | Method |                                  URL                                  |
 |:------:|:---------------------------------------------------------------------:|
 |   GET  | https://us-central1-actyourpose.cloudfunctions.net/app/api/papua/{id} |
+
+- ```get All Inside Pose```
+
+| Method |                                  URL                                 |
+|:------:|:--------------------------------------------------------------------:|
+|   GET  | https://us-central1-actyourpose.cloudfunctions.net/app/api/getInside |
+
+- ```get Inside Pose by id```
+
+| Method |                                    URL                                    |
+|:------:|:-------------------------------------------------------------------------:|
+|   GET  | https://us-central1-actyourpose.cloudfunctions.net/app/api/getInside/{id} |
+
+- ```get All Outside Pose```
+
+| Method |                                  URL                                  |
+|:------:|:---------------------------------------------------------------------:|
+|   GET  | https://us-central1-actyourpose.cloudfunctions.net/app/api/getOutside |
+
+- ```get Outside Pose by id```
+
+| Method |                                     URL                                    |
+|:------:|:--------------------------------------------------------------------------:|
+|   GET  | https://us-central1-actyourpose.cloudfunctions.net/app/api/getOutside/{id} |
+
+---
+
+## Dokumentasi API ML Model
+
+**Base URL**: https://actyourpose.uc.r.appspot.com/
+
+- ```predict```
+
+| Method |                      URL                     |
+|:------:|:--------------------------------------------:|
+|  POST  | https://actyourpose.uc.r.appspot.com/predict |
+
+| Method | Parameter |          Keterangan         |
+|:------:|:---------:|:---------------------------:|
+|  POST  | file      | gambar yang akan diprediksi |
