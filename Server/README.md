@@ -30,4 +30,4 @@ gcloud app deploy
 gcloud app browse
 ```
 
-10. to try the API, see the dokumentasi.md
+10. to try the API, see the [API documentation](dokumentasi.md)
