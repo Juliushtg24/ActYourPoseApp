@@ -33,15 +33,16 @@ def model_predict(path, model):
     else:
       return jsonify({"message": "Outside"})
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/')
+def index():
+  return "Hello!"
+
+@app.route('/predict', methods=['POST', 'GET'])
 def predict():
 	if request.method == 'POST':
 		files = request.files['file']
 		prediction = model_predict(files, model)
 		return prediction
-
-	return "Hello!"
-
 
 if __name__ == '__main__':
     app.run(debug=True)
