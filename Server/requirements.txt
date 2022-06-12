@@ -1,0 +1,12 @@
+Flask
+gunicorn
+tensorflow==2.6
+Keras==2.6.0
+protobuf~=3.19.0
+tensorflow-estimator==2.6.0
+h5py
+opencv-python
+numpy
+matplotlib
+urllib3
+google-python-cloud-debugger

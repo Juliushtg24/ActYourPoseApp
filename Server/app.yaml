@@ -1,0 +1,5 @@
+runtime: python37
+entrypoint: gunicorn -b :$PORT main:app --timeout 120
+instance_class: F4_1G
+# resources:
+#   memory_gb: 4
